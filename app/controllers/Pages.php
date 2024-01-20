@@ -7,11 +7,9 @@ class Pages extends Controller {
 
     public function index() {
 
-        $posts = $this->postModel-> getPosts();
-
         $data = [
-            'title' => 'Welcome',
-            'posts' => $posts
+            'title' => 'Shareposts',
+            'description' => 'A solid MVC framework'
         ];
 
         $this->view('pages/index', $data);
@@ -20,10 +18,15 @@ class Pages extends Controller {
     }
 
     public function about() {
+
         $data = [
-            'title' => 'About'
+            'title' => 'About Us',
+            'description' => 'An app'
         ];
+
         $this->view('pages/about', $data);
+
+
     }
 
 }

@@ -14,3 +14,6 @@ define('URL_ROOT', 'http://localhost/mvc');
 
 // Site Name
 define('SITE_NAME', 'MVC');
+
+// App version
+define('APP_VERSION', '1.0.0');

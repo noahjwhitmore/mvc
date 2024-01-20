@@ -4,7 +4,7 @@
 // Loads the models and views
 class Controller {
 
-    protected $postModel;
+    protected $userModel;
 
     // Load model
     public function model($model) {

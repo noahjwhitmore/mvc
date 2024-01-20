@@ -38,7 +38,7 @@ class Database {
 
     public function bind($param, $value, $type = null){
         if (is_null($type)) {
-            switch($type) {
+            switch(true) {
                 case is_int($value):
                     $type = PDO::PARAM_INT;
                     break;
@@ -54,6 +54,7 @@ class Database {
         }
 
         $this->stmt->bindValue($param, $value, $type);
+
     }
 
     // Execute the prepared statement

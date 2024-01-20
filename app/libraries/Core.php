@@ -12,9 +12,12 @@ class Core {
         //print_r($this->getUrl());
         $url = $this->getUrl();
 
-        if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
-            $this->currentController = ucwords($url[0]);
-            unset($url[0]);
+
+        if (isset($url[0])) {
+            if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
+                $this->currentController = ucwords($url[0]);
+                unset($url[0]);
+            }
         }
 
         // Require controler
